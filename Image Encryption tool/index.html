@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PixelCrypt Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🔐 PixelCrypt Pro</h1>
+<p>Advanced Image Encryption & Decryption System</p>
+
+<div class="upload-area" id="dropZone">
+    <input type="file" id="fileInput" accept="image/*" hidden>
+    <p>📁 Drag & Drop Image Here</p>
+    <button onclick="fileInput.click()">Browse Image</button>
+</div>
+
+<div class="key-section">
+    <input
+        type="password"
+        id="secretKey"
+        placeholder="Enter Secret Key"
+    >
+</div>
+
+<div class="buttons">
+    <button onclick="encryptImage()">Encrypt</button>
+    <button onclick="decryptImage()">Decrypt</button>
+    <button onclick="downloadImage()">Download</button>
+    <button onclick="resetTool()">Reset</button>
+</div>
+
+<div class="stats">
+
+    <div class="card">
+        <h3>Width</h3>
+        <span id="width">0</span>
+    </div>
+
+    <div class="card">
+        <h3>Height</h3>
+        <span id="height">0</span>
+    </div>
+
+    <div class="card">
+        <h3>Security Score</h3>
+        <span id="security">0%</span>
+    </div>
+
+</div>
+
+<div class="preview">
+
+    <div>
+        <h3>Original</h3>
+        <canvas id="originalCanvas"></canvas>
+    </div>
+
+    <div>
+        <h3>Processed</h3>
+        <canvas id="encryptedCanvas"></canvas>
+    </div>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
